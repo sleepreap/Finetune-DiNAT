@@ -7,6 +7,9 @@ Mask2Former is a new architecture capable of addressing any image segmentation t
 Run our demo using Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1uIWE5KbGFSjrxey2aRd5pWkKNY1_SaNq)
 ### [Mask2Former Hugging Face](https://huggingface.co/docs/transformers/model_doc/mask2former)
 
+![NAT-Intro](assets/dinat/intro_dark.png#gh-dark-mode-only)
+![NAT-Intro](assets/dinat/intro_light.png#gh-light-mode-only)
+
 Neighborhood Attention (NA, local attention) was introduced in original paper, 
 [NAT](NAT.md), and runs efficiently with extension to PyTorch, [NATTEN](https://github.com/SHI-Labs/NATTEN).
 
@@ -15,6 +18,8 @@ DiNat is a new model, [DiNAT](DiNAT.md), which extends NA by dilating neighborho
 Combinations of NA/DiNA are capable of preserving locality, maintaining translational equivariance, expanding the receptive field exponentially, 
 and capturing longer-range inter-dependencies,  leading to significant performance boosts in downstream vision tasks.
 
+###  [NAT Hugging Face](https://huggingface.co/models?filter=nat) 
+### [DiNAT Hugging Face](https://huggingface.co/models?filter=dinat)
 
 ## Purpose
 The purpose of this document is to build a process of finetuning Mask2Former using DiNAT backbone for custom dataset on semantic segmentation. The code is done using Pytorch Lightning and the model can be imported from hugging face.
