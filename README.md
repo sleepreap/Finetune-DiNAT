@@ -7,7 +7,7 @@ Mask2Former is a new architecture capable of addressing any image segmentation t
 Run our demo using Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1uIWE5KbGFSjrxey2aRd5pWkKNY1_SaNq)
 ### [Mask2Former Hugging Face](https://huggingface.co/docs/transformers/model_doc/mask2former)
 
-![NAT-Intro] ![intro_dark](https://github.com/sleepreap/Finetune-DiNAT/assets/98008874/af6becb2-084c-465d-a2fe-f5dbef670be6)
+[DiNAT] (https://github.com/sleepreap/Finetune-DiNAT/assets/98008874/af6becb2-084c-465d-a2fe-f5dbef670be6)
 
 Neighborhood Attention (NA, local attention) was introduced in original paper, 
 [NAT](NAT.md), and runs efficiently with extension to PyTorch, [NATTEN](https://github.com/SHI-Labs/NATTEN).
