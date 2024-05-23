@@ -7,13 +7,22 @@ Mask2Former is a new architecture capable of addressing any image segmentation t
 Run our demo using Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1uIWE5KbGFSjrxey2aRd5pWkKNY1_SaNq)
 ### [Mask2Former Hugging Face](https://huggingface.co/docs/transformers/model_doc/mask2former)
 
-## Purpose
-The purpose of this document is to build a process of finetuning Mask2Former for custom dataset on semantic segmentation. The code is done using Pytorch Lightning and the model can be imported from hugging face.
+Neighborhood Attention (NA, local attention) was introduced in original paper, 
+[NAT](NAT.md), and runs efficiently with extension to PyTorch, [NATTEN](https://github.com/SHI-Labs/NATTEN).
 
-1. Create a virtual environment: `conda create -n Mask2Former python=3.10 -y` and `conda activate Mask2Former `
+DiNat is a new model, [DiNAT](DiNAT.md), which extends NA by dilating neighborhoods (DiNA, sparse global attention, a.k.a. dilated local attention).
+
+Combinations of NA/DiNA are capable of preserving locality, maintaining translational equivariance, expanding the receptive field exponentially, 
+and capturing longer-range inter-dependencies,  leading to significant performance boosts in downstream vision tasks.
+
+
+## Purpose
+The purpose of this document is to build a process of finetuning Mask2Former using DiNAT backbone for custom dataset on semantic segmentation. The code is done using Pytorch Lightning and the model can be imported from hugging face.
+
+1. Create a virtual environment: `conda create -n DiNAT python=3.8 -y` and `conda activate DiNAT `
 2. Install [Pytorch CUDA 12.1](https://pytorch.org/): ` pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 `
-3. Download code: `git clone https://github.com/sleepreap/Finetune-Mask2Former.git` 
-4. `cd Finetune-Mask2Former` and run `pip install -e .`
+3. Download code: `git clone https://github.com/sleepreap/Finetune-DiNAT.git` 
+4. `cd Finetune-DiNAT` and run `pip install -e .`
 
 ## Dataset
 Use createDataset.py to create the folders.
@@ -80,5 +89,22 @@ saveComparisonWithOverlay.py would save a plot of the overlay and the ground tru
   author={Bowen Cheng and Ishan Misra and Alexander G. Schwing and Alexander Kirillov and Rohit Girdhar},
   journal={CVPR},
   year={2022}
+}
+@inproceedings{hassani2023neighborhood,
+	title        = {Neighborhood Attention Transformer},
+	author       = {Ali Hassani and Steven Walton and Jiachen Li and Shen Li and Humphrey Shi},
+	booktitle    = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+	month        = {June},
+	year         = {2023},
+	pages        = {6185-6194}
+}
+@article{hassani2022dilated,
+	title        = {Dilated Neighborhood Attention Transformer},
+	author       = {Ali Hassani and Humphrey Shi},
+	year         = 2022,
+	url          = {https://arxiv.org/abs/2209.15001},
+	eprint       = {2209.15001},
+	archiveprefix = {arXiv},
+	primaryclass = {cs.CV}
 }
 ```
