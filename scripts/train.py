@@ -30,4 +30,4 @@ if __name__=="__main__":
     print("Training starts!!")
     trainer.fit(model,data_module)
     print("saving model!")
-    trainer.save_checkpoint("dinat.ckpt")
+    trainer.save_checkpoint("dinat_mask2former.ckpt")
