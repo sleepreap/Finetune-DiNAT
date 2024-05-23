@@ -1,7 +1,7 @@
 from setuptools import setup, find_namespace_packages
 
-setup(name='Mask2Former',
-      python_requires=">=3.10",
+setup(name='DiNAT',
+      python_requires=">=3.8",
       install_requires=[
           "transformers",
           "datasets",
@@ -10,6 +10,8 @@ setup(name='Mask2Former',
           "tqdm",
           "matplotlib",
           "opencv-python",
-          "scipy"
+          "scipy",
+            "cmake",
+            "natten"
       ],
       )
