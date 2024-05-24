@@ -1,7 +1,10 @@
 import pytorch_lightning as pl
 import torch
-from transformers import Mask2FormerForUniversalSegmentation
-from transformers import AutoImageProcessor
+from transformers import (
+    AutoImageProcessor,
+    DinatConfig, 
+    Mask2FormerForUniversalSegmentation
+)
 from torch import nn
 import DiNAT.config as config
 import evaluate
