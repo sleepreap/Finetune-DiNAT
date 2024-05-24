@@ -29,7 +29,7 @@ The purpose of this document is to build a process of finetuning Mask2Former usi
 3. Install [Pytorch CUDA 11.8](https://pytorch.org/): ` pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 `
 4. `cd Finetune-DiNAT` and run `pip install -e .`
 5. Install [Cmake]: `pip install cmake `
-6. Install [NATTEN]: `pip3 install natten==0.14.6+torch200cu118 -f https://shi-labs.com/natten/wheels`
+6. Install [NATTEN]: `pip3 install natten==0.17.1+torch230cu118 -f https://shi-labs.com/natten/wheels`
 
 ## Dataset
 Use createDataset.py to create the folders.
