@@ -5,7 +5,7 @@ torch.set_float32_matmul_precision("medium")
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from mask2former import ( Mask2FormerFinetuner, 
+from DiNAT import ( Mask2FormerFinetuner, 
                         SegmentationDataModule, 
                         DATASET_DIR, 
                         BATCH_SIZE, 
