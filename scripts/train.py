@@ -2,7 +2,7 @@ import pytorch_lightning as pl
 import torch
 torch.manual_seed(1)
 torch.set_float32_matmul_precision("medium")
-from mask2former import ( Mask2FormerFinetuner, 
+from DiNAT import ( Mask2FormerFinetuner, 
                         SegmentationDataModule, 
                         DATASET_DIR, 
                         BATCH_SIZE, 
