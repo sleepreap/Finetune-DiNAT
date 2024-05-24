@@ -3,7 +3,7 @@ import torch
 from transformers import Mask2FormerForUniversalSegmentation
 from transformers import AutoImageProcessor
 from torch import nn
-import mask2former.config as config
+import DiNAT.config as config
 import evaluate
 import time
 import json 
