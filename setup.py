@@ -10,8 +10,6 @@ setup(name='DiNAT',
           "tqdm",
           "matplotlib",
           "opencv-python",
-          "scipy",
-            "cmake",
-            "natten"
+          "scipy"
       ],
       )
