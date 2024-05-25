@@ -9,8 +9,7 @@ from DiNAT import ( Mask2FormerFinetuner,
                         NUM_WORKERS, 
                         ID2LABEL, 
                         LEARNING_RATE, 
-                        LOGGER, 
-                        PRECISION)
+                        LOGGER)
 import argparse
 
 
@@ -30,7 +29,6 @@ if __name__=="__main__":
 
     trainer = pl.Trainer(
         logger=LOGGER,
-        precision=PRECISION,
         accelerator='cuda',
         devices=[0],
         num_nodes=1,
